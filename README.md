@@ -6,10 +6,10 @@ The T-33 is programmed through Logic Circuit, a graphical digital logic editor f
 http://www.logiccircuit.org/
 
 To begin using the circuit:
-1. Install the latest version of logic circuit using the link provided
-2. Download  /T-33/Circuit files/T-33.CircuitProject and open using Logic Circuit
-3. Double click the circuit on the left bar that says 1. T-33 testing
-4. Click the power button in the bottom right corner and away you go
+- Install the latest version of logic circuit using the link provided
+- Download  /T-33/Circuit files/T-33.CircuitProject and open using Logic Circuit
+- Double click the circuit on the left bar that says 1. T-33 testing
+- Click the power button in the bottom right corner and away you go
 
 Stuff to add:
 - More sample programs
