@@ -1,0 +1,59 @@
+Programs:
+
+	- Make a program that does the following: 2 * 17 - 29
+		Answer = 5
+			Status: Nominal
+			Code:
+			DATA 		INS		 				MICROCODE
+			00010001 0	ADD SHFT WRT1			00010001
+			00000000 1	NULL					00000000
+			00011101 0	NULL					00000000
+			00000000 0	SWP						10000000
+			00000000 0	SUB READ1 WRT2			00100110
+			00000000 0	READ2					00001000
+
+	- Make a program that does the following: (29 - 17) * 2
+		Answer = 24
+			Status: Nominal
+			Code:
+			DATA 		INS		 				MICROCODE
+			00010001 0	NULL					00000000
+			00000000 0	SWP						10000000
+			00011101 0	SUB SHFT WRITE1			00110001
+			00000000 0	READ1					00000100
+
+	- Make a program that does the following: 3 * 2^4
+		Answer = 48
+			Status: Nominal
+			Code:
+			DATA		INS						MICROCODE
+			00000011 0	ADD SHFT WRITE1			00010001
+			00000000 1	NULL					00000000
+			00000000 0	ADD SHFT READ1 WRITE1	00010101
+			00000000 1	NULL					00000000
+			00000000 0	ADD SHFT READ1 WRITE1	00010101
+			00000000 1	NULL					00000000
+			00000000 0	ADD SHFT READ1 WRITE1	00010101
+			00000000 0	READ1					00000100
+
+	- Find the OR of 45 and 18
+		Answer = 63
+			Status: Nominal
+			Code:
+			DATA		INS						MICROCODE
+			00101101 0	NULL					00000000
+			00000000 0	SWP						10000000
+			00010010 0	OR WRITE1				01000001
+			00000000 0	READ1					00000100
+
+	- Find the OR of 45 and 18 without using the ALU function
+		Answer = 63
+			Status: Nominal
+			Code:
+			DATA		INS						MICROCODE
+			00101101 0	ADD WRITE1				00000001
+			00000000 1	NULL					00000000
+			00010010 0	NULL					00000000
+			00000000 0	READ1					00000100
+			00000000 0	ADD WRITE2				00000010
+			00000000 0	READ2					00001000

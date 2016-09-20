@@ -12,7 +12,6 @@ To begin using the circuit:
 - Click the power button in the bottom right corner and away you go
 
 Stuff to add:
-- More sample programs
 
 Future additions:
 - HDL implementation
